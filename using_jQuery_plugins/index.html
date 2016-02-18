@@ -10,6 +10,7 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="js/animsition/animsition.min.css">
+        <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -31,7 +32,52 @@
       </header><!--/header-->
         <div class="row">
           <div class="grid-full">
+            <!--carousel goes here-->
+            <div class="slides">
+              <div class="slide blue">
+                <div class="grid-half">
+                    <h2>DailyFeed</h2>
+                    <p>Your number one podcast app</p>
+                    <a href="#" class="button">Check it Out</a>
+                  </div>
+                  <div class="grid-half">
+                    <img src="img/slide-dailyFeed.png" alt="" />
+                  </div>
+                </div><!--/Slide 1-->
 
+              <div class="slide orange">
+                <div class="grid-half">
+                  <h2>ChitChat</h2>
+                  <p>The worldest easiest to use cross device chat app</p>
+                  <a href="#" class="button">Check it Out</a>
+                </div>
+                <div class="grid-half">
+                  <img src="img/slide-chitChat.png" alt="" />
+                </div>
+              </div><!--/Slide 2-->
+
+              <div class="slide green">
+                <div class="grid-half">
+                  <h2>MixTape</h2>
+                  <p>An app to search, create and share mixtapes</p>
+                  <a href="#" class="button">Check it Out</a>
+                </div>
+                <div class="grid-half">
+                  <img src="img/slide-mixTape.png" alt="" />
+                </div>
+              </div><!--/Slide 3-->
+
+              <div class="slide yellow">
+                <div class="grid-half">
+                  <h2>KITT</h2>
+                  <p>Turn your car into KITT from Knight Rider</p>
+                  <a href="#" class="button">Check it Out</a>
+                </div>
+                <div class="grid-half">
+                  <img src="img/slide-Kitt.png" alt="" />
+                </div>
+              </div><!--/Slide 4-->
+            </div>
           </div>
           <div class="main row">
             <div class="grid-third">
@@ -69,6 +115,10 @@
         <script src="js/jquery-1.11.2.min.js"></script>
       <script src="js/animsition/jquery.animsition.min.js"></script>
       <script src="js/sticky/jquery.sticky.js"></script>
+      <script type="text/javascript" src="js/slick/slick.min.js"></script>
       <script src="js/main.js"></script>
+      <script>
+        $('.slides').slick();
+      </script>
     </body>
 </html>

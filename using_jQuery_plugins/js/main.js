@@ -6,7 +6,16 @@ $(".animsition").animsition({
   outDuration: 500
 });
 
-$('.header').sticky();
+$('.header').sticky({
+  getWidthFrom: '.containter',
+  responsiveWidth: true
+});
+
+$('.work').sticky({
+  topSpacing: 63,
+  getWidthFrom: '.containter',
+  responsiveWidth: true
+});
 
 $('.header').on('sticky-start',function(){
   $('.description').html("We build <strong>great</strong> apps");
@@ -14,4 +23,12 @@ $('.header').on('sticky-start',function(){
 
 $('.header').on('sticky-end',function(){
   $('.description').html('We build apps');
+});
+
+$('.work').on('sticky-start',function(){
+  $(this).append("<a href='mailto:hello@fhergomez.com' class='email-text'> Email Us</a>");
+});
+
+$('.work').on('sticky-end',function(){
+  $('.email-text').remove();
 });
