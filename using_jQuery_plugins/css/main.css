@@ -355,11 +355,20 @@ footer {
 
 /* slick styles */
 .slick-dots {
-  bottom: 20px;
+  bottom: -5px;
 }
 
 .slick-dots li button:before {
   font-size: 16px;
+  color: #000;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
 }
 
 .is-sticky header a {
