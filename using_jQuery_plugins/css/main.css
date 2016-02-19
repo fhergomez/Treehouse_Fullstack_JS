@@ -344,7 +344,7 @@ footer {
 }
 .is-sticky .header {
   background-color: black;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .is-sticky .work {
