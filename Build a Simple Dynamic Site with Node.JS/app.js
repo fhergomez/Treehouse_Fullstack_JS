@@ -2,6 +2,18 @@ var router = require("./router.js");
 //Problem: We need a simple way to look at a user's badge count and JavaScript point from a web browser
 //Solution: Use Node.js to perform the profile look ups and server our template via HTTP
 
+// to use for bcrypt
+var unsecurePlainTextPassword = "password"
+
+// to has a password
+var bcrypt = require('bcrypt');
+bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.hash(unsecurePlainTextPassword, salt, function(err, hash) {
+      console.log(hash);
+        // Store hash in your password DB.
+    });
+});
+
 //Create a web server
 var http = require('http');
 http.createServer(function (request, response) {
