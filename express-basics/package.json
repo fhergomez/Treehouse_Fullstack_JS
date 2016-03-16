@@ -1,0 +1,29 @@
+{
+  "name": "express-basics",
+  "version": "1.0.0",
+  "description": "This repo features an express app to serve as a demo in the Express Basics course on Treehouse.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdngr/treehouse-express-basics.git"
+  },
+  "keywords": [
+    "express",
+    "node.js",
+    "javaScript",
+    "Treehouse"
+  ],
+  "author": "Fernando Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdngr/treehouse-express-basics/issues"
+  },
+  "homepage": "https://github.com/hdngr/treehouse-express-basics#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}
