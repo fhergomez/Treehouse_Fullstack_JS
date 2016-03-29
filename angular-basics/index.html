@@ -3,15 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Varela+Round">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body ng-app="todoListApp">
 
-  <h1>My TODOs</h1>
+  <div class="container-fluid" ng-controller="mainCtrl">
+    <div class="row">
+      <h1>My TODOs</h1>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 list">
+        <input type="checkbox"/>
+        <label class="editing-label"></label>
+        <input class="editing-label" type="text"/>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 actions">
+        <button type="button" class="btn btn-primary" ng-click='helloWorld()'>edit</button>
+        <button type="button" class="btn btn-success">save</button>
+        <button type="button" class="btn btn-danger">delete</button>
+      </div>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/hello-world.js"></script>
+  <!-- <script type="text/javascript" src="scripts/hello-world.js"></script> -->
 </body>
 </html>
