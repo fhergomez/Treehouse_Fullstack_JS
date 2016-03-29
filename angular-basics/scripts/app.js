@@ -5,3 +5,9 @@ app.controller('mainCtrl', ['$scope', function ($scope) {
     console.log('This the helloWorld controller function in the mainCtrl!');
   }
 }]);
+
+app.controller('coolCtrl', ['$scope', function ($scope) {
+  $scope.whoAmI = function(){
+    console.log('Hello there, this is the coolCtrl function!')
+  }
+}])
