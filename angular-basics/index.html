@@ -14,17 +14,20 @@
 
   <div class="container-fluid list" ng-controller="mainCtrl">
     <div class="row">
-      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
       <h1>My TODOs</h1>
-        <input type="checkbox" ng-model="todo.completed"/>{{todos}}
-        <label class="editing-label" ng-hide="editing" ng-click='helloWorld()'>{{ todo.name }}</label>
-        <input class="editing-label" type="text" ng-model="todo.name" ng-show="editing"/>
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 actions">
-        <button type="button" class="btn btn-primary" ng-click="editing = !editing">edit</button>
-        <button type="button" class="btn btn-success" ng-click='whoAmI()'>save</button>
-        <button type="button" class="btn btn-danger">delete</button>
-      </div>
+        <div ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.completed"/>
+          <label class="editing-label" ng-hide="editing" ng-click='helloWorld()'>{{ todo.name }}</label>
+          <input class="editing-label" type="text" ng-model="todo.name" ng-show="editing"/>
+
+          <div class="actions">
+            <button type="button" class="btn btn-primary" ng-click="editing = !editing">edit</button>
+            <button type="button" class="btn btn-success" ng-click='whoAmI()'>save</button>
+            <button type="button" class="btn btn-danger">delete</button>
+          </div>
+        </div>
+
     </div>
   </div>
 
