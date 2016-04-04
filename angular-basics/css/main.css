@@ -53,7 +53,7 @@ a:hover {
       .list .item .actions .delete:hover {
         color: #f28888;
       }
-  .list .item.editing .actions {
+  .list .item.editing-item .actions {
     margin-top: 17px;
   }
   .list .edited label:after {

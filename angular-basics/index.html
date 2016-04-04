@@ -16,18 +16,18 @@
     <div class="row">
 
       <h1>My TODOs</h1>
-        <div ng-repeat="todo in todos">
+        <div class="item" ng-repeat="todo in todos" ng-class="{'editing-item': editing, 'edited': todo.edited}">
           <input type="checkbox" ng-model="todo.completed"/>
-          <label class="editing-label" ng-hide="editing" ng-click='helloWorld()'>{{ todo.name }}</label>
-          <input class="editing-label" type="text" ng-model="todo.name" ng-show="editing"/>
+          <label ng-hide="editing" ng-click='helloWorld()'>{{ todo.name }}</label>
+          <input class="editing-label" type="text" ng-model="todo.name" ng-show="editing" ng-blur="editing = false;" ng-change="todo.edited = true"/>
 
           <div class="actions">
             <button type="button" class="btn btn-primary" ng-click="editing = !editing">edit</button>
-            <button type="button" class="btn btn-success" ng-click='whoAmI()'>save</button>
+            <button type="button" class="btn btn-success" ng-click='helloWorld()'>save</button>
             <button type="button" class="btn btn-danger">delete</button>
           </div>
         </div>
-
+      {{todos}}
     </div>
   </div>
 
