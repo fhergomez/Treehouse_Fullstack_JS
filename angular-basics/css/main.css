@@ -16,11 +16,15 @@ a:hover {
   color: #65a1cc;
 }
 
+h1 {
+  margin-top: 60px;
+}
+
 .list {
   background: #fff;
   width: 80%;
   min-width: 500px;
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   border-top: 40px solid #5a6772;
   text-align: left;
 }
@@ -71,7 +75,7 @@ a:hover {
     padding: 25px 0 27px 25px;
   }
 
-/*input[type="checkbox"] {
+input[type="checkbox"] {
     display:none;
 }
 input[type="checkbox"] + span {
@@ -80,9 +84,9 @@ input[type="checkbox"] + span {
     height:19px;
     margin:-1px 4px 0 0;
     vertical-align:middle;
-    background:url(checkbox-empty.svg) left top no-repeat;
+    background:url('checkbox-empty.svg') left top no-repeat;
     cursor:pointer;
 }
 input[type="checkbox"]:checked + span {
-    background:url(checkbox-filled.svg) left top no-repeat;
-}*/
+    background:url('checkbox-filled.svg') left top no-repeat;
+}

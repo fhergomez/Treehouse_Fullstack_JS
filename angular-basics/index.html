@@ -11,20 +11,24 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body ng-app="todoListApp">
-
+  <h1>Reminders</h1>
   <div class="container-fluid list" ng-controller="mainCtrl">
     <div class="row">
 
-      <h1>My TODOs</h1>
-        <div class="item" ng-repeat="todo in todos" ng-class="{'editing-item': editing, 'edited': todo.edited}">
+
+      <div class="add">
+        <a href="" ng-click="addTodo(todo)">+ Add a reminder</a>
+      </div>
+        <div class="item" ng-repeat="todo in todos | orderBy: 'completed'" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" ng-init="todo.completed = false">
           <input type="checkbox" ng-model="todo.completed"/>
+          <span ng-click="todo.completed = !todo.completed"></span>
           <label ng-hide="editing" ng-click='helloWorld()'>{{ todo.name }}</label>
           <input class="editing-label" type="text" ng-model="todo.name" ng-show="editing" ng-blur="editing = false;" ng-change="todo.edited = true"/>
 
           <div class="actions">
             <button type="button" class="btn btn-primary" ng-click="editing = !editing">edit</button>
-            <button type="button" class="btn btn-success" ng-click='helloConsole()'>save</button>
-            <button type="button" class="btn btn-danger">delete</button>
+            <button type="button" class="btn btn-success" ng-click='saveTodo(todo)'>save</button>
+            <button type="button" class="btn btn-danger" ng-click="deleteTodo(todo, $index)">delete</button>
           </div>
         </div>
       {{todos}}
