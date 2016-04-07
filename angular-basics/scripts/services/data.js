@@ -14,7 +14,7 @@ app.service('dataService', function ($http) {
     console.log("The " + todo.name + " todo has been deleted!");
   };
 
-  this.saveTodo = function(todo){
-    console.log("The " + todo.name + " todo has been saved!");
+  this.saveTodos = function(todos){
+    console.log(todos.length + " reminders have been saved!");
   };
 });

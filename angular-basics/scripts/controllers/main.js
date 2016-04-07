@@ -1,4 +1,4 @@
-app.controller('mainCtrl', function ($scope,dataService) {
+app.controller('mainCtrl', function ($scope, dataService) {
   $scope.addTodo = function(){
     var todo = {name: "This is a new reminder"};
     $scope.todos.unshift(todo);
@@ -9,17 +9,22 @@ app.controller('mainCtrl', function ($scope,dataService) {
     $scope.todos = response.data;
   });
 
-  $scope.saveTodo = function(todo){
-    dataService.saveTodo(todo);
-  }
-
   $scope.deleteTodo = function(todo, $index){
     dataService.deleteTodo(todo);
     $scope.todos.splice($index, 1);
-  }
+  };
+
+  $scope.saveTodos = function(){
+    var filteredTodos = $scope.todos.filter(function(todo){
+      if (todo.edited) {
+        return todo;
+      };
+    });
+    dataService.saveTodos(filteredTodos);
+  };
 
   $scope.learningNgChange = function(){
     console.log('An input changed!');
-  }
+  };
 
-})
+});
